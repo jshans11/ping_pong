@@ -2,9 +2,6 @@ import sys
 import httpx
 import asyncio
 
-
-
-
 async def send_command(command, param=None):
     urls = ["http://localhost:8000", "http://localhost:8001"]
     async with httpx.AsyncClient() as client:
@@ -29,11 +26,9 @@ if __name__ == "__main__":
     param = int(sys.argv[2]) if len(sys.argv) > 2 else None
 
     if command == "start":
-        # start_servers()
         asyncio.run(send_command(command, param))
     elif command == "stop":
         asyncio.run(send_command(command))
-        # stop_servers()
     elif command in ["pause", "resume"]:
         asyncio.run(send_command(command))
     else:

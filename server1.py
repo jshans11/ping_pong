@@ -8,13 +8,8 @@ pong_time_ms = 1000
 game_paused = False
 game_running = False
 
-@app.get("/")
-async def home_page():
-    return "Home Page of Ping Pong Game"
-
 @app.post("/ping", status_code=200)
 async def ping():
-    print("server1 got pinged")
     return {"message": "pong"}
 
 @app.post("/start")

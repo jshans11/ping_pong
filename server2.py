@@ -10,7 +10,6 @@ game_running = False
 
 @app.post("/ping", status_code=200)
 async def ping():
-    print("server2 got pinged")
     return {"message": "pong"}
 
 @app.post("/start")
