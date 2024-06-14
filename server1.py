@@ -50,7 +50,7 @@ async def send_ping():
                     print(response.json())
                 except Exception as e:
                     print(e)
-        await asyncio.sleep(pong_time_ms / 1000)
+        await asyncio.sleep(pong_time_ms / 1000) 
 
 if __name__ == "__main__":
     import uvicorn
